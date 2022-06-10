@@ -4,7 +4,9 @@ function PageNav() {
 
     return(
         <nav className="nav">
-            <h1 className="nav__title">PokeBattle</h1>
+            <img 
+                src="https://fontmeme.com/permalink/220610/81463fe97b74ca39bcec963b3ee184e3.png" 
+                alt="pokemon-font" border="0"/>
         </nav>
     )
 }
