@@ -4,12 +4,14 @@ function PokeCardTwo(props) {
   const poke2 = props.poke2;
   const poke2HP = props.poke2HP;
   return (
-    <section className="pokecard">
+    <section className={props.className}>
       {/* <h1>Pokemon Card</h1> */}
-      <img className="pokecard__image" src={poke2.image} alt={poke2.name} />
+      <img className="pokecard__image pokecard__image--two" src={poke2.image} alt={poke2.name} />
       <div className="details">
         <h1 className="details__name">{poke2.name}</h1>
-        <div className="details__hp">Health: {poke2HP}</div>
+        <div className="details__hp-bar">
+          <p className="details__hp">Health: {poke2HP}</p>
+        </div>
       </div>
       <div className="desc">
         <h2 className="desc__title">Description</h2>

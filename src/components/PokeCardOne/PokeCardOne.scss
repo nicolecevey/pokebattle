@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+
     @include tablet {
         margin: 5rem 2rem;
     }
@@ -19,12 +21,26 @@
 
     &__image{
         width: 100%;
-        // height: 30rem;
+        height: 25rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         object-position: center;
         object-fit: cover;
-        border-radius: 5px;
+        border-radius: 6px;
         aspect-ratio: 9 / 14;
+
+        &:hover {
+            box-shadow: rgba(126, 127, 129, 0.645) 8px 0px 20px;
+        }
+        @include tablet {
+            height: 20rem;
+            width: 15rem;
+        }
+
+        @include desktop {
+            height: 35rem;
+            width: 30rem;
+        }
     }
 }
 
@@ -39,7 +55,18 @@
     }
 
     &__hp {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+        color: red;
+
+    }
+
+    &__hp-bar {
+        width: 18rem;
+        height: 2.5rem;
+        background-color: rgb(3, 164, 3);
+        border-radius: 10px;
+        margin-top: 1rem;
     }
 }
 
@@ -56,6 +83,7 @@
     &__text {
         font-size: 2rem;
         text-align: center;
+        height: 13rem;
     }
 
     &__artwork{
@@ -64,5 +92,19 @@
 
     &__ability {
         font-size: 2rem;
+        height: 2rem;
     }
+
+    &__ability-container {
+        height: 4rem;
+    }
+}
+
+.pokecard__1{
+    transform: translate(-30rem, 0);
+    transition: transform 3s;
+}
+.pokecard__2{
+    transform: translate(30rem, 0);
+    transition: transform 3s;
 }

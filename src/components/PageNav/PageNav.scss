@@ -1,11 +1,13 @@
 .nav {
-    height: 5rem;
+    height: 7rem;
     background-color: #ef5350;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &__title {
-        color: #FFDE00;
+    &__pokeball {
+        height: 3rem;
+        width: 3rem;
+        margin: 5rem;
     }
 }

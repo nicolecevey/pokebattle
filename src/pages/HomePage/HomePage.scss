@@ -1,37 +1,77 @@
 @use "../../styles/partials/mixins" as *;
 
+body {
+    height: 100%;
+}
+
+.bg-image {
+    background-image: url("../../assets/images/pokeBattleBackground(1).jpg");
+    height: 170rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+        height: 93rem;
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    padding: 3rem 0;
 
     @include tablet {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 0;
     }
 }
 
 .vs-icon {
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     margin-top: 1rem;
+
+    @include desktop {
+        height: 15rem;
+        width: 15rem;
+    }
 }
 
 .attack {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+    background-color: #ef5350;
+
+    @include tablet {
+        background: none;
+    }
 
     &__button {
         width: 10rem;
-        height: 2.5rem;
-        margin-bottom: 1rem;
+        height: 3rem;
+        margin-bottom: 2rem;
         cursor: pointer;
         background-color: #eece01;
         border: none;
         border-radius: 4px;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        
+        &:hover {
+            background-color: #c0a600;
+        }
+    }
+
+    &__winner {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 }
