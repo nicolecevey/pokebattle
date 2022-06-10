@@ -1,7 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+
 .pokecard {
     background-color: #313131d0;
-    margin: 10rem 10rem;
-    height: 30rem;
-    width: 25rem;
     border-radius: 4px;
+    height: 25rem;
+    width: 20rem;
+    margin-top: 5rem;
+
+    @include tablet {
+        margin: 5rem 2rem;
+    }
+
+    @include desktop {
+        margin: 10rem 10rem;
+        height: 30rem;
+        width: 25rem;
+    }
 }
