@@ -1,0 +1,11 @@
+.nav {
+    height: 5rem;
+    background-color: #ef5350;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        color: #FFDE00;
+    }
+}

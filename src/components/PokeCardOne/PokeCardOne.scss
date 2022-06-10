@@ -1,0 +1,34 @@
+@use "../../styles/partials/mixins" as *;
+
+.pokecard {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 35rem;
+    width: 20rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+        margin: 5rem 2rem;
+    }
+
+    @include desktop {
+        margin: 10rem 10rem;
+        height: 30rem;
+        width: 25rem;
+    }
+    &__image{
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 2rem;
+        object-fit: cover;
+        border-radius: 4px;
+        background-color: transparent;
+    }
+}
+.desc{
+    &__artwork{
+        width: 200px;
+    }
+}
