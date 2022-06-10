@@ -1,7 +1,11 @@
+import "./PageNav.scss";
+
 function PageNav() {
 
     return(
-        <div></div>
+        <nav className="nav">
+            <h1 className="nav__title">PokeBattle</h1>
+        </nav>
     )
 }
 

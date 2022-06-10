@@ -1,6 +1,14 @@
+import "./PokeCard.scss";
+
 function PokeCard() {
     return (
-        <h1>Hello</h1>
+        <section className="pokecard">
+            <h1>Pokemon Card</h1>
+            <img></img>
+            <h1>Name</h1>
+            <div></div>
+            <p>Description</p>
+        </section>
     )
 }
 

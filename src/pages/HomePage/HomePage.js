@@ -11,7 +11,14 @@ class HomePage extends React.Component {
             <>  
                 <main className="main">
                     <PokeCard/>
-                    <img src={versus}></img>
+                    <div className="attack">
+                        <img 
+                            src={versus}
+                            className="vs-icon"
+                            >
+                        </img>
+                        <button>Attack</button>
+                    </div>
                     <PokeCard/>
                 </main>
             </>

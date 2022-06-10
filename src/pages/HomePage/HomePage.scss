@@ -1,4 +1,15 @@
 .main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.vs-icon {
+    height: 10rem;
+    width: 10rem;
+}
+
+.attack {
+    display: flex;
+    flex-direction: column;
 }
