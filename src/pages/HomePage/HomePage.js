@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.scss";
-import versus from "../../assets/vs.png";
+import versus from "../../assets/images/vs.png";
 import PokeCardOne from "../../components/PokeCardOne/PokeCardOne";
 import PokeCardTwo from "../../components/PokeCardTwo/PokeCardTwo";
 import axios from "axios";
@@ -34,9 +34,8 @@ class HomePage extends React.Component {
       pokemonTwo: pokemon2,
     });
   };
-  //   fetchPokemons = () => {
-  //     return axios.get(pokemonEndpoint);
-  //   };
+
+  
 
   render() {
     this.state.pokemonOne && console.log(this.state.pokemonOne);
@@ -48,7 +47,7 @@ class HomePage extends React.Component {
           )}
           <div className="attack">
             <img src={versus} className="vs-icon"></img>
-            <button>Attack</button>
+            <button className="attack__button">Attack!</button>
           </div>
           {this.state.pokemonTwo && (
             <PokeCardTwo poke2={this.state.pokemonTwo} />

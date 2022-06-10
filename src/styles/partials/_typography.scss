@@ -1,0 +1,9 @@
+@use "../partials/variables" as *;
+
+//Regular
+@font-face {
+    font-family: $font-stack;
+    src: url("../../assets/fonts/POKEMON-DS-FONT.TTF") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}

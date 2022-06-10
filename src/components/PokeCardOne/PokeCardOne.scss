@@ -1,11 +1,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .pokecard {
-    background-color: transparent;
-    border-radius: 4px;
-    height: 35rem;
+    border-radius: 5px;
+    height: 100%;
     width: 20rem;
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,20 +13,50 @@
 
     @include desktop {
         margin: 10rem 10rem;
-        height: 30rem;
-        width: 25rem;
+        height: 25rem;
+        width: 30rem;
     }
+
     &__image{
         width: 100%;
-        height: 30rem;
-        margin-bottom: 2rem;
+        // height: 30rem;
+        margin-bottom: 1rem;
         object-fit: cover;
-        border-radius: 4px;
-        background-color: transparent;
+        border-radius: 5px;
+        aspect-ratio: 9 / 14;
     }
 }
-.desc{
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__name {
+        font-size: 5rem;
+    }
+
+    &__hp {
+        font-size: 2rem;
+    }
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    &__text {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
     &__artwork{
         width: 200px;
+    }
+
+    &__ability {
+        font-size: 2rem;
     }
 }
