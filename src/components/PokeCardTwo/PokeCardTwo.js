@@ -2,13 +2,14 @@ import "../PokeCardOne/PokeCardOne.scss";
 
 function PokeCardTwo(props) {
   const poke2 = props.poke2;
+  const poke2HP = props.poke2HP;
   return (
     <section className="pokecard">
       {/* <h1>Pokemon Card</h1> */}
       <img className="pokecard__image" src={poke2.image} alt={poke2.name} />
       <div className="details">
         <h1 className="details__name">{poke2.name}</h1>
-        <div className="details__hp">Health: {poke2.healthPoint}</div>
+        <div className="details__hp">Health: {poke2HP}</div>
       </div>
       <div className="desc">
         <h2 className="desc__title">Description</h2>
