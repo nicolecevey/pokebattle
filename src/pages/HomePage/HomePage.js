@@ -35,7 +35,9 @@ class HomePage extends React.Component {
     });
   };
 
-  
+  // const clickHandler = (event) => {
+    
+  // }
 
   render() {
     this.state.pokemonOne && console.log(this.state.pokemonOne);
@@ -47,7 +49,11 @@ class HomePage extends React.Component {
           )}
           <div className="attack">
             <img src={versus} className="vs-icon"></img>
-            <button className="attack__button">Attack!</button>
+            <button 
+              onClick={this.clickHandler}
+              className="attack__button"
+              >Attack!
+            </button>
           </div>
           {this.state.pokemonTwo && (
             <PokeCardTwo poke2={this.state.pokemonTwo} />

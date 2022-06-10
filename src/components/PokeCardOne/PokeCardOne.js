@@ -11,7 +11,8 @@ function PokeCardOne(props) {
         <div className="details__hp">Health: {poke1.healthPoint}</div>
       </div>
       <div className="desc">
-        <h2 className="desc__text">Description</h2>
+        <h2 className="desc__title">Description</h2>
+        <p className="desc__text">{poke1.description}</p>
         <img className="desc__artwork" src={poke1.artwork} alt="artwork" />
         <p className="desc__ability">Ability 1: {poke1.ability1}</p>
         {poke1.ability2 && (
