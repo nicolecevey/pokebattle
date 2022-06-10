@@ -1,29 +1,42 @@
 import React from "react";
 import "./HomePage.scss"
 import versus from "../../assets/vs.png"
-import PokeCard from "../../components/PokeCard/PokeCard";
+import PokeCardOne from "../../components/PokeCardOne/PokeCardOne";
+import PokeCardTwo from "../../components/PokeCardTwo/PokeCardTwo";
 import axios from "axios";
 
 const pokemonEndpoint = "http://localhost:8080/pokemon";
 
 class HomePage extends React.Component {
 
+    state = {
+        pokemonOne: null,
+        pokemonTwo: null,
+    }
+
     componentDidMount(){
         document.title = "PokeBattle";
 
         axios
-            .get(pokemonEndpoint)
+            .get(`${pokemonEndpoint}/random`)
             .then((response) => {
-                console.log(response.data);
+                this.setState({
+                    pokemonOne: response.data,
+                    pokemonTwo: response.data
+                })
             })
+    }
 
+    fetchPokemons = () => {
+        return axios.get(pokemonEndpoint);
     }
 
     render() {
         return (
             <>  
                 <main className="main">
-                    <PokeCard/>
+                    <PokeCardOne 
+                        poke1={this.state.pokemonOne}/>
                     <div className="attack">
                         <img 
                             src={versus}
@@ -32,7 +45,8 @@ class HomePage extends React.Component {
                         </img>
                         <button>Attack</button>
                     </div>
-                    <PokeCard/>
+                    <PokeCardTwo 
+                        poke2={this.state.pokemonTwo}/>
                 </main>
             </>
         )

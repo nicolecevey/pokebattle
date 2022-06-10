@@ -1,6 +1,6 @@
-import "./PokeCard.scss";
+import "./PokeCardOne.scss";
 
-function PokeCard() {
+function PokeCardOne() {
     return (
         <section className="pokecard">
             <h1>Pokemon Card</h1>
@@ -12,4 +12,4 @@ function PokeCard() {
     )
 }
 
-export default PokeCard
+export default PokeCardOne;
